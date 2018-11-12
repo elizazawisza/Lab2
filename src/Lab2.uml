@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Lab2</OriginalElement>
+  <nodes>
+    <node x="149.02857142857147" y="168.0">Lab2.InputStreamTest</node>
+    <node x="38.02857142857147" y="168.0">Lab2.Invoice</node>
+    <node x="101.50000000000001" y="79.0">Lab2.Element</node>
+    <node x="7.5" y="79.0">Lab2.Firm</node>
+    <node x="31.278571428571468" y="0.0">Lab2.InputStream</node>
+    <node x="319.02857142857147" y="168.0">Lab2.ElementTest</node>
+    <node x="45.800000000000026" y="247.0">Lab2.App</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Lab2.ElementTest" target="Lab2.Element">
+      <point x="0.0" y="-14.5" />
+      <point x="381.02857142857147" y="138.0" />
+      <point x="188.8" y="138.0" />
+      <point x="38.80000000000001" y="14.5" />
+    </edge>
+    <edge source="Lab2.Firm" target="Lab2.InputStream">
+      <point x="0.0" y="-14.5" />
+      <point x="44.5" y="54.0" />
+      <point x="62.02857142857147" y="54.0" />
+      <point x="-30.75" y="14.5" />
+    </edge>
+    <edge source="Lab2.Invoice" target="Lab2.Firm">
+      <point x="-18.20000000000001" y="-14.5" />
+      <point x="65.32857142857145" y="148.0" />
+      <point x="63.0" y="148.0" />
+      <point x="18.5" y="14.5" />
+    </edge>
+    <edge source="Lab2.Element" target="Lab2.InputStream">
+      <point x="0.0" y="-14.5" />
+      <point x="150.0" y="54.0" />
+      <point x="123.52857142857147" y="54.0" />
+      <point x="30.75" y="14.5" />
+    </edge>
+    <edge source="Lab2.App" target="Lab2.Invoice">
+      <point x="-18.25" y="-14.5" />
+      <point x="64.05000000000003" y="222.0" />
+      <point x="60.77857142857147" y="222.0" />
+      <point x="-22.75" y="14.5" />
+    </edge>
+    <edge source="Lab2.Invoice" target="Lab2.Element">
+      <point x="-1.4210854715202004E-14" y="-14.5" />
+      <point x="83.52857142857145" y="128.0" />
+      <point x="111.20000000000002" y="128.0" />
+      <point x="-38.8" y="14.5" />
+    </edge>
+    <edge source="Lab2.InputStreamTest" target="Lab2.Element">
+      <point x="0.0" y="-14.5" />
+      <point x="224.02857142857147" y="148.0" />
+      <point x="169.40000000000003" y="148.0" />
+      <point x="19.400000000000006" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="146.0" y="163.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
