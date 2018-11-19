@@ -4,10 +4,10 @@ import static laboratorium.InputStream.integerInputStream;
 import static laboratorium.InputStream.stringInputScanner;
 
 public class Element {
-  private String item;
-  private int price;
-  private int tax;
-  private int quantity;
+  public String item;
+  public int price;
+  public int tax;
+  public int quantity;
   public double amount;
 
   public Element() {
