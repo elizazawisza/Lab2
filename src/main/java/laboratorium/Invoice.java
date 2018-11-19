@@ -3,21 +3,39 @@ package laboratorium;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static laboratorium.InputStream.integerInputStream;
+import static laboratorium.InputStream.stringInputScanner;
+
 
 public class Invoice {
   public String name;
-  public String adress;
-  public int nip;
+  private String adress;
+  private int nip;
   private ArrayList<Element> elements = new ArrayList<>();
-  private double totalAmount;
 
   public Invoice() {
-    Firm f = new Firm();
-    name = f.name;
-    adress = f.adress;
-    nip = f.nip;
+    name = this.getName();
+    adress = this.getAdress();
+    nip = this.getNip();
     elements = this.getArray();
-    totalAmount = this.getTotalAmount();
+  }
+
+  private String getName() {
+    System.out.println("Podaj nazwę firmy");
+    String tmpName = stringInputScanner();
+    return tmpName;
+  }
+
+  private String getAdress() {
+    System.out.println("Podaj adres firmy");
+    String tmpAdress = stringInputScanner();
+    return tmpAdress;
+  }
+
+  private int getNip() {
+    System.out.println("Podaj NIP firmy");
+    int tmpNip = integerInputStream(stringInputScanner());
+    return tmpNip;
   }
 
   private ArrayList<Element> getArray() {
@@ -37,13 +55,5 @@ public class Invoice {
       }
     }
     return elements;
-  }
-
-  private double getTotalAmount() {
-    double total = 0;
-    for (int i = 0; i < elements.size(); i++) {
-      total += elements.get(i).amount;
-    }
-    return total;
   }
 }
