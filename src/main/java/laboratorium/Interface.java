@@ -29,9 +29,10 @@ public class Interface {
           invoices.add(in);
           break;
         case 2:
+          System.out.println("Podaj nazwę firmy, dla której chcesz wyświetlić fakturę");
           nazwa = stringInputScanner();
           for( Invoice invoice : invoices) {
-              if(nazwa==invoice.name)
+              if(nazwa.equals(invoice.name))
                 invoice.show();
           }
           break;

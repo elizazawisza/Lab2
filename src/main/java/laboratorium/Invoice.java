@@ -45,6 +45,7 @@ public class Invoice {
 
   private ArrayList<Element> getArray() {
     Element element = new Element();
+    this.elements.add(element);
     while (true) {
       System.out.println("Jeśli chcesz dodać więcej elementów wybierz n. "
               + "\nJeśli chcesz zakończyć wybierz q");
@@ -67,22 +68,18 @@ public class Invoice {
   }
 
   public void show(){
-    System.out.println(name);
-    System.out.println(adress);
-    System.out.println(nip);
+    System.out.println("\n\nNazwa firmy: \t" + name);
+    System.out.println("Adres firmy: \t" + adress);
+    System.out.println("Nip firmy: \t\t" + nip);
+    System.out.println("\n");
     for(Element element : elements){
-      System.out.println(element.item);
-      System.out.println(element.price);
-      System.out.println(element.quantity);
-      System.out.println(element.tax);
-      System.out.println(element.amount);
+      System.out.println("Nazwa produktu: \t" + element.item);
+      System.out.println("Cena jednostkowa: \t" + element.price);
+      System.out.println("Ilość: \t\t\t\t" + element.quantity);
+      System.out.println("Wartość podatku: \t" + element.tax);
+      System.out.println("Wartość całkowita: \t" + element.amount+"\n");
     }
-    System.out.println(totalAmount);
+    System.out.println("\nWartość całkowita: \t " + totalAmount + "\n\n");
   }
 
-  public void save(){
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    String invoice = gson.toJson();
-
-  }
 }
