@@ -1,10 +1,9 @@
 package laboratorium;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-
 import static laboratorium.InputStream.integerInputStream;
 import static laboratorium.InputStream.stringInputScanner;
+
+import java.util.ArrayList;
 
 public class Interface {
   public Interface() {
@@ -18,11 +17,7 @@ public class Interface {
       System.out.println("Jeśli chcesz wystawić fakturę wybierz 1, \n"
               + "jeśli chcesz wyświetlić fakturę wybierz 2, \n"
               + "jeśli chcesz zakończyć działanie programu wybierz 3\n");
-      try {
-        option = integerInputStream(stringInputScanner());
-      } catch (InputMismatchException e) {
-        System.out.println("Wartość musi być liczba z zakresu 1-3");
-      }
+      option = integerInputStream(stringInputScanner());
       switch (option) {
         case 1:
           Invoice in = new Invoice();
@@ -31,13 +26,14 @@ public class Interface {
         case 2:
           System.out.println("Podaj nazwę firmy, dla której chcesz wyświetlić fakturę");
           nazwa = stringInputScanner();
-          for( Invoice invoice : invoices) {
-              if(nazwa.equals(invoice.name))
-                invoice.show();
+          for (Invoice invoice : invoices) {
+            if (nazwa.equals(invoice.name)) {
+              invoice.show();
+            }
           }
           break;
         case 3:
-            break;
+          break;
         default:
       }
     }

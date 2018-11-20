@@ -1,12 +1,9 @@
 package laboratorium;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.ArrayList;
-
 import static laboratorium.InputStream.integerInputStream;
 import static laboratorium.InputStream.stringInputScanner;
+
+import java.util.ArrayList;
 
 
 public class Invoice {
@@ -59,25 +56,25 @@ public class Invoice {
     return elements;
   }
 
-  private double getTotalAmount(){
+  private double getTotalAmount() {
     double total = 0;
-    for(int i = 0; i < elements.size(); i++){
-      total+=elements.get(i).amount;
+    for (int i = 0; i < elements.size(); i++) {
+      total += elements.get(i).amount;
     }
     return total;
   }
 
-  public void show(){
+  public void show() {
     System.out.println("\n\nNazwa firmy: \t" + name);
     System.out.println("Adres firmy: \t" + adress);
     System.out.println("Nip firmy: \t\t" + nip);
     System.out.println("\n");
-    for(Element element : elements){
+    for (Element element : elements) {
       System.out.println("Nazwa produktu: \t" + element.item);
       System.out.println("Cena jednostkowa: \t" + element.price);
       System.out.println("Ilość: \t\t\t\t" + element.quantity);
       System.out.println("Wartość podatku: \t" + element.tax);
-      System.out.println("Wartość całkowita: \t" + element.amount+"\n");
+      System.out.println("Wartość całkowita: \t" + element.amount + "\n");
     }
     System.out.println("\nWartość całkowita: \t " + totalAmount + "\n\n");
   }
